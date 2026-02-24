@@ -5,30 +5,18 @@ int main(){
 	int n=4;
 
 	for(int i=0;i<n;i++){
-			int number=1;
-			
-			for(int j=0;j<i+1;j++){
-			cout<<" ";
-		
-		}
-				
-			
-		for(int j=0;j<i+1;j++){
-			cout<<number<<" ";
-			number=number+1;
-		}
-		
-			for(int j=i+1;j>0;j--){
-			cout<<number<<" ";
-			number=number-1;
-		}
-		
-		for(int j=0;j<i+1;j++){
-			cout<<" ";
-		
+			int number=1;			
+			for(int j=0;j<(n-i);j++){
+			cout<<" ";		
 		}	
-		
-		
+	for(int j=0;j<(i+1);j++){
+		cout<<number;
+		number=number+1;
+	}
+			for(int j=i;j>0; j--){
+	cout<<j;
+	}
+	
 		cout<<endl;
 	}
 	
