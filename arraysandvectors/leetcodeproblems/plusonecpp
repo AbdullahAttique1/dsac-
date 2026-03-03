@@ -1,0 +1,26 @@
+#include <iostream>
+#include<vector>
+using namespace std;
+int main() {
+    vector<int> digits={ 1,2,3};
+    int digitsarraytonum=0;
+    for(int i=0;i<digits.size();i++){
+     digitsarraytonum=digitsarraytonum*10+digits[i];
+    }
+ 
+    int finaldigits=digitsarraytonum+1;
+    for(int i=digits.size()-1;i>=0;i--){
+   digits[i]=finaldigits%10;
+   finaldigits=finaldigits/10;
+    }
+
+      if(finaldigits > 0) {
+        digits.insert(digits.begin(), finaldigits);
+    }
+
+    for(int val :digits){
+        cout<<val;
+    }
+   
+    return 0;
+}
