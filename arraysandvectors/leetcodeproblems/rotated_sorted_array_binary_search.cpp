@@ -12,7 +12,7 @@ while(start<=end){
      if(target == nums[mid]){
                 return mid;
             } 
-    if(nums[start] < nums[mid] ){  //leftsort
+    if(nums[start] <= nums[mid] ){  //leftsort
       if(nums[start] <= target && target < nums[mid]){      
           
                    end=mid-1;
@@ -21,6 +21,7 @@ while(start<=end){
             start=mid+1;
         }
 
+        
     } else { //right sort
           if(nums[mid] < target && target <= nums[end]){
            end=mid-1;
