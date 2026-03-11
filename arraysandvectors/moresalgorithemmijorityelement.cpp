@@ -16,5 +16,5 @@ int main() {
             }
         }
 cout<<ans;
-    return 0;
+    return ans;
 }
