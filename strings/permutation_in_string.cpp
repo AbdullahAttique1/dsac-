@@ -4,10 +4,18 @@
 #include <vector> 
 using namespace std;
 
+bool isFreqSame(int frequency[],int frequency2[]){
+for(int i= 0;i<26;i++){
+    if(frequency[i] != frequency2[i]){
+        return false;
+    }
+}
+return true;
+}
 
-int main() {
-
-    int frequency[25]={0};
+bool stringPermutaion(){
+    
+    int frequency[26]={0};
  string s1="ab";
  string s2="eidbaooo";
 
@@ -28,13 +36,18 @@ int main() {
     windIndex++;idx++;
     }
 
-    for(int val : winFreq){
-        cout<<val;
-    }
+  if(isFreqSame(winFreq, frequency)){
+    return true;
+}
  }
 
+return false;
+}
 
 
 
-    return 0;
+int main() {
+cout<<stringPermutaion()<<endl;
+
+return 0;
 }

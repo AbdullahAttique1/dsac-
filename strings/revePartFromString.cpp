@@ -7,19 +7,12 @@ void removePart(){
     string s="daabcbaabcbc";
     string part="abc";
  
-
-
-
-
-
-
 while(s.find(part) != string::npos){
     int startpart=s.find(part);
     int endpart=part.length();
    s.erase(startpart,endpart);
 
 }
-
 
 
 for(char ch :s){

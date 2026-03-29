@@ -17,7 +17,7 @@ void findNextPermutaion(vector<int> &nums,int size){
         return;
     }
 
-   for(int i=size-2;i>=0;i--){
+   for(int i=size-1;i>=permitize;i--){
         if(  nums[i]   >  nums[permitize]  ){
             swap(nums[i],  nums[permitize] );
             break;      

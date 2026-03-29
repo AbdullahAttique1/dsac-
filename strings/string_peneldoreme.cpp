@@ -9,22 +9,22 @@ bool isValid(char ch ){
 }
 
 bool checkPen(){   
-   string str="raceacar";  
+   string s="raceacar";  
   
 int st=0;
-int  end=str.size()-1;
+int  end=s.size()-1;
 
    while(st < end){
-if(!isValid(str[st])) {
+if(!isValid(s[st])) {
 st++;
 continue;
 
 }
-if(!isValid(str[end])){
+if(!isValid(s[end])){
     end--;
     continue;
 }
-if(tolower(str[st]) != tolower(str[end])){
+if(tolower(s[st]) != tolower(s[end])){
    return false;
 }
 
