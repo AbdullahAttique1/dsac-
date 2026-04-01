@@ -13,7 +13,13 @@ int main() {
     int count=0;
     
     for(int i=2;i<n; i++){
-cout<<isprime[i];
+        if(isprime[i]){
+            count++;
+            for(int j=i*2;j<n;j=j+i){
+                isprime[j]=false;
+            }
+        }
+
     }
 
           

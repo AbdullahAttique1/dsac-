@@ -5,7 +5,7 @@ int findMatrix(int matrix[][3],int rows,int coulmn){
 for(int i=0;i<rows;i++){
     int add=0;
     for(int j=0;j<coulmn;j++){
-        add+=matrix[j][i];
+        add+=matrix[i][j];
     }
     result=max(result, add);
 }

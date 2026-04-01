@@ -25,9 +25,7 @@ bool searchVector( vector<vector<int>> &matrix,int target){
 int mid=start + (end-start)/2;
 if(matrix[mid][0] <=  target &&  target <= matrix[mid][m-1]){
 //find the row now find the target in row
-if(rowsearchTarget(matrix,target,mid)){
-    return true;
-}
+return rowsearchTarget(matrix, target, mid);
 
 
 }else if( target > matrix[mid][m-1]){

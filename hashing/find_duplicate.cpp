@@ -4,7 +4,7 @@
 using namespace std;
 int main() {
     vector<int>  nums = {1,3,4,2,2}; 
-    vector<int>ans;
+
     unordered_set<int> m;
 
     for(int val : nums){

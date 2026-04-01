@@ -1,30 +1,27 @@
 #include <iostream>
 #include <vector>
+#include <unordered_map>
 using namespace std;
 int main() {
    vector<int> nums = {2,7,11,15};
-   vector<int>ans;
-   int target = 9;
-
-   int start=0,end=nums.size()-1;
+   int target=9;
+   vector<int> ans;
+   unordered_map<int,int> m;
    
-
-   while(start<=end){
-if(nums[start]+nums[end] == target){
-    ans.push_back(nums[start]);
-    ans.push_back(nums[end]);
-         break;
-} 
-
-if(nums[start]+nums[end] < target){
-start++;
-}else{
-    end--;
-}
+for(int i=0;i<nums.size();i++){
+   int first_val=nums[i];
+   int second_val=target-first_val;
+   if(m.find(second_val) != m.end() ){
+ans.push_back(i);
+ans.push_back(m[second_val]);
+ break;
    }
-for(int val : ans){
-    cout<<val;
+
+   m[first_val]=i;
+  
+
 }
+  
             
     return 0;
 }
