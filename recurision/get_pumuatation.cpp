@@ -1,7 +1,7 @@
 #include <iostream>
 #include <vector>
 using namespace std;
-void getPermute(vector<int> nums,int idx,vector<int> ans ){
+void getPermute(vector<int> &nums,int idx, vector<vector<int>>&ans ){
 if(idx==nums.size()){
 ans.push_back({nums});
     return;
@@ -16,7 +16,7 @@ for(int i=idx;i<nums.size();i++){
 }
 int main() {
     vector<int> nums = {1,2,3};
-    vector<int> ans;
+    vector<vector<int>> ans;
     getPermute(nums,0,ans);
             
     return 0;
