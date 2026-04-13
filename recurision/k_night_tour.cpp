@@ -26,7 +26,7 @@ int main() {
  vector<vector<int>> arr={{0,11,16,5,20},{17,4,19,10,15},{12,1,8,21,6},{3,18,23,14,9},{24,13,2,7,22}}; 
 int n=arr.size();
 int expVAl=0;
- cout<<isValid(arr,n,0,0,expVAl);
+ cout<<isValid(arr,0,0,n,expVAl);
  //first move will be arr[0][0]
 
             
