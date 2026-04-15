@@ -49,9 +49,11 @@ public:
             Node* temp=head;
             head=head->next;
             temp->next=NULL;
+          
             delete temp;
 
            }
+
 
 
    void pop_back(){
