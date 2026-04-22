@@ -1,17 +1,19 @@
 #include <iostream>
 #include <vector>
+#include <stack>
+
 using namespace std;
 int funFindCelebraity(vector<vector<int>>&matrix){
 stack<int> s;
-for(int i=0i<matrix.size();i++){
+for(int i=0;i<matrix.size();i++){
     s.push(i);
 }
 while(s.size()>1){
     int i=s.top();
-    s.po();
+    s.pop();
     int j=s.top();
     s.pop();
-    if(arr[i][j]==0){
+    if(matrix[i][j]==0){
         s.push(i);
     }else{
         s.push(j);
@@ -19,7 +21,7 @@ while(s.size()>1){
 }
 int celeb=s.top();
 for(int i=0;i<matrix.size();i++){
-    if((i!=celeb) && (arr[i][celeb] ==0 ||arr[celb][i] ==1)){
+    if((i!=celeb) && (matrix[i][celeb] ==0 ||matrix[celeb][i] ==1)){
         return -1;
     }
 }
@@ -31,6 +33,7 @@ int main() {
                 {0, 1, 1}};
 
     int finddelebraity=funFindCelebraity(matrix);
+    cout<<finddelebraity;
             
     return 0;
 }
